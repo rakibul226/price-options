@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import { AiFillStar } from 'react-icons/ai'
 
 const Feature = ({feature}) => {
@@ -10,5 +10,9 @@ const Feature = ({feature}) => {
         </div>
     );
 };
+
+Feature.propTypes = {
+    feature: PropTypes.string.isRequired
+}
 
 export default Feature;

@@ -1,4 +1,5 @@
 import Feature from "../feature/feature";
+import PropTypes from 'prop-types';
 
 const PriceOption = ({option}) => {
 
@@ -10,9 +11,9 @@ const PriceOption = ({option}) => {
                 <span className="text-3xl">/mon</span>
             </h2>
             <h4 className="text-3xl py-5">{name}</h4>
-            <div className="flex-grow">
+            <div className="flex-grow ">
                 {
-                    features.map(feature => <Feature feature={feature}></Feature>)
+                    features.map((feature,idx) => <Feature feature={feature} key={idx}></Feature>)
                 }
             </div>
                        
@@ -20,5 +21,11 @@ const PriceOption = ({option}) => {
         </div>
     );
 };
+
+PriceOption.propTypes = {
+    option: PropTypes.object.isRequired
+    
+
+}
 
 export default PriceOption;
