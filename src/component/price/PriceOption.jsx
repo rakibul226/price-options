@@ -24,8 +24,6 @@ const PriceOption = ({option}) => {
 
 PriceOption.propTypes = {
     option: PropTypes.object.isRequired
-    
-
 }
 
 export default PriceOption;
